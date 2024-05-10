@@ -11,3 +11,6 @@
 - https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html
 
 - https://www.sktime.net/en/stable/api_reference/auto_generated/sktime.classification.feature_based.SummaryClassifier.html#sktime.classification.feature_based.SummaryClassifier
+
+
+60.7 + 0.02 = 60.720000000000006
