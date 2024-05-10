@@ -1,0 +1,13 @@
+- there's more piano samples that any other activity
+
+- try windows size between 150, 200, 250 and 300 maybe?
+
+- zero crossing count (the rate at which the signal changes from negative to positive)
+
+-add more samples to dataset
+
+-add data for test and validation sets
+
+- https://scikit-learn.org/stable/modules/generated/sklearn.metrics.classification_report.html
+
+- https://www.sktime.net/en/stable/api_reference/auto_generated/sktime.classification.feature_based.SummaryClassifier.html#sktime.classification.feature_based.SummaryClassifier
