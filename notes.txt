@@ -13,4 +13,133 @@
 - https://www.sktime.net/en/stable/api_reference/auto_generated/sktime.classification.feature_based.SummaryClassifier.html#sktime.classification.feature_based.SummaryClassifier
 
 
-60.7 + 0.02 = 60.720000000000006
+- get mean, standard deviation, zero crossing rate, root mean square??, zero crossing rate, autocorrelation and entropy??
+
+
+
+- make functions for:
+    - encoding labels
+    - cleaning names
+    -
+
+- do we need a Pipeline thing?
+
+- we added skewness or however you spell it, as well as other stuff to the feature set to see if the DT model performs better with more information
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Dealing with imbalanced datasets, where one class has significantly more samples than others, is a common challenge in machine learning. Here are some strategies you can consider:
+
+1. **Collect more data**: If feasible, try to collect more data for the classes with fewer samples. This can help balance out the dataset.
+
+3. **Algorithmic approaches**:
+   - Use algorithms that are robust to class imbalance, such as decision trees, random forests, or gradient boosting algorithms like XGBoost or LightGBM.
+   - Some algorithms have class weight parameters that you can adjust to penalize misclassifications of the minority classes more heavily.
+
+4. **Evaluation metrics**:
+   - Instead of accuracy, consider using evaluation metrics that are more robust to class imbalance, such as precision, recall, F1-score, or area under the ROC curve (AUC-ROC).
+   - Depending on the specific problem, you might prioritize different metrics. For example, in fraud detection, recall might be more important than precision.
+
+5. **Ensemble methods**:
+   - Ensemble methods like bagging and boosting can be effective in handling imbalanced datasets. They combine multiple models to make predictions, which can help improve performance on minority classes.
+
+6. **Adjust decision thresholds**: Depending on the problem and the classifier used, you might adjust the decision threshold to favor sensitivity (recall) over specificity (precision).
+
+8. **Cross-validation**: Ensure that any evaluation of your model is performed using techniques like stratified k-fold cross-validation to preserve the class distribution in each fold.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Once you have extracted features from your motion dataset, there are several tasks you can perform using these features:
+
+1. **Classification**:
+   - You can train a classification model to predict the label (output) based on the extracted features. Common algorithms include decision trees, random forests, support vector machines, and neural networks.
+
+4. **Clustering**:
+   - You can perform clustering analysis to group similar motion patterns together. This can help identify common behaviors or trends within the dataset.
+
+5. **Dimensionality reduction**:
+   - If your dataset contains a large number of features, you can use techniques like principal component analysis (PCA) or t-distributed stochastic neighbor embedding (t-SNE) to reduce the dimensionality of the feature space while preserving as much information as possible.
+
+6. **Feature importance analysis**:
+   - You can analyze the importance of each feature in predicting the output label. This can help you understand which features are most informative and which ones can be potentially discarded to simplify the model.
+
+7. **Time-series analysis**:
+   - If your motion data is collected over time, you can perform time-series analysis to uncover temporal patterns, trends, and seasonality in the data.
+
+8. **Visualization**:
+   - You can visualize the data and extracted features using plots, histograms, scatter plots, heatmaps, or other visualization techniques to gain insights into the underlying patterns and relationships.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   Understanding the performance measures such as recall, F1-score, and the confusion matrix, along with knowing which classes are being correctly classified and which ones each different model struggles with, is valuable for gaining insights into the behavior of your classifier and identifying areas for improvement. Here are some steps you can take to leverage this information effectively:
+
+    Identify Misclassified Classes: Review the confusion matrix to identify which classes are being misclassified most frequently. Focus on classes with low recall, as these indicate instances where the classifier is struggling to correctly classify the true positives.
+
+    Analyze Misclassification Patterns: Examine the confusion matrix and recall scores to identify patterns of misclassification. Are certain classes consistently misclassified as others? Are there particular classes that are frequently confused with each other? Understanding these patterns can help diagnose the root causes of misclassification errors.
+
+    Feature Importance Analysis: Conduct feature importance analysis to determine which features are most influential in the classification process. Are there specific features that contribute significantly to the misclassification of certain classes? Feature importance analysis can help identify opportunities for feature engineering or selection to improve classification performance.
+
+    Model Evaluation and Selection: Compare the performance of different models based on various metrics such as recall, F1-score, and overall accuracy. Identify the model that best balances performance across all classes and meets the specific requirements of your application.
+
+    Class-specific Model Tuning: Consider tuning the classifier or adjusting model parameters specifically for classes that are frequently misclassified. This could involve adjusting class weights, using class-specific thresholds, or exploring alternative algorithms that are better suited for imbalanced datasets.
+
+    Data Augmentation or Resampling: If certain classes are underrepresented in the training data, consider techniques such as data augmentation or resampling to balance the class distribution and improve classifier performance on minority classes.
+
+    Error Analysis and Feedback Loop: Conduct thorough error analysis to understand the root causes of misclassification errors and iteratively refine your approach. Collect feedback from domain experts or stakeholders to gain additional insights and refine the classification process accordingly.
+
+    Continuous Monitoring and Improvement: Classifier performance may evolve over time due to changes in data distribution, feature dynamics, or external factors. Continuously monitor classifier performance and periodically reevaluate and refine your approach to ensure optimal performance.
+
+By systematically analyzing classifier performance, understanding misclassification patterns, and taking targeted actions to address areas of weakness, you can iteratively improve the performance and robustness of your classification models.
